@@ -31,11 +31,11 @@ def bot_get_wiki(keyword):
 app = Flask(__name__)
 
 # 必須放上Channel Access Token
-line_bot_api = LineBotApi('iFd5gAK1ujdLp6xWTmRLLiSpy+T3bqD913hFvqCfAnuNqdZ3pQj9sljizzFOmKK/xCL7Ao+WMv+U5XuhmL35TzFYo2gRVLHtJU/CaQ2gh6KP2c35KPM2SmCQopch/LJGGiZYJbGly/viGj7LardtegdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi('Channel Access Token')
 # 必須放上Channel Secret
-handler = WebhookHandler('2a3168a9275c453cde8b131e877ebd63')
+handler = WebhookHandler('Channel Secret')
 # 必須放上Your user ID
-line_bot_api.push_message('U7c9a069f8e07441d0edb7ed7fbe1b6d9', TextSendMessage(text='你可以開始了'))
+line_bot_api.push_message('user ID', TextSendMessage(text='你可以開始了'))
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
